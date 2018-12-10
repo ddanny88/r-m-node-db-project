@@ -1,28 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+import Main from './components/Characters/Main';
+import Header from "./components/Characters/Header";
+import Fav from './components/Characters/Favs/Fav'
+
+
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      favorites: []
+    }
+    this.setFav = this.setFav.bind(this);
+  }
+
+  setFav(arr){
+    this.setState({
+      favorites: arr.slice()
+    })
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Header/>
+        <Fav 
+          favorites={this.state.favorites}
+          setFav={this.setFav}
+        />
+        <Main 
+          setFav={this.setFav}
+        />
       </div>
     );
   }
 }
 
-export default App;
+

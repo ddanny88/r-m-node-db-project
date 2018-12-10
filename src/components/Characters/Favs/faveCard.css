@@ -1,0 +1,31 @@
+.fave_card{
+    border: 1px solid green;
+    border-radius: 30px;
+    text-align: center;
+    background: hsl(85, 57%, 55%);
+    margin: 10px; 
+    width: 300px;
+    height: 300;
+}
+
+.char_image{
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+}
+.big_button{
+    width: 100px;
+    height: 30px;
+    border-radius: 35px;
+    border: none;
+    margin: 10px;
+    font-size: 20px;
+    background: black;
+    color: hsl(85, 57%, 55%);
+}
+
+.big_button:hover{
+    background:  hsl(85, 57%, 55%);
+    color: black;
+    border: 1px solid black;
+}

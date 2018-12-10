@@ -1,0 +1,13 @@
+.main-header{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 200px;
+    background: black;
+    margin-bottom: 10px;
+}
+
+.hero-img{
+    width: 200;
+    height: 200px;
+}
